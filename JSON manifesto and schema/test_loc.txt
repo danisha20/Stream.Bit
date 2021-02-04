@@ -1,0 +1,14 @@
+{
+"fileLocations": [
+    {
+        "URIs": [
+            "https://tweets-hackoff1.s3.amazonaws.com/sagemaker/train/lda_train.csv"
+        ]
+    }
+],
+"globalUploadSettings": {
+    "format": "CSV",
+    "delimiter": ",",
+    "containsHeader": "false"
+}
+}

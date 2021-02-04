@@ -1,0 +1,28 @@
+
+%% TO CREATE THE SOURCE 
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+CREATE SOURCE CONNECTOR SOURCE_TWITTER_01 WITH (
+    'connector.class' = 'com.github.jcustenborder.kafka.connect.twitter.TwitterSourceConnector',
+    'twitter.oauth.accessToken' = 'YOUR_OWN_TWITTER_ACCESS_TOKEN',
+    'twitter.oauth.consumerSecret' = 'YOUR_OWN_TWITTER_SECRET_CONSUMER_KEY',
+    'twitter.oauth.consumerKey' = 'YOUR_OWN_TWITTER_CONSUMER_KEY',
+    'twitter.oauth.accessTokenSecret' = 'YOUR_OWN_TWITTER_SECRET_ACCESS_TOKEN',
+    'kafka.status.topic' = 'twitter_01',
+    'process.deletes' = false,
+    'filter.keywords' = '#Keywords,for,#the, #tweets, #to, be, #retrieved'
+);
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+%% TO START THE TWEET STREAM
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+CREATE STREAM TWEETS WITH (KAFKA_TOPIC='twitter_01', VALUE_FORMAT='AVRO');
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------

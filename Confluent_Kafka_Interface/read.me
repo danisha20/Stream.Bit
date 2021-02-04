@@ -1,0 +1,8 @@
+= ksqlDB Stream.Bit setup
+
+1. Get Twitter API credentials from https://developer.twitter.com/
+2. Update the file `credentials.properties` with the Twitter credentials
+3. Install Docker Desktop
+4. Run `docker-compose up -d` on a cmd instance. This will install and run the Confluent environment.
+5. On a new cmd follow the instruction on `TweetStreamInstructions.ksql`
+6. Run the Python Notebook `ksql_retrieve.ipynb` and it will start to fetch in real-time the tweet stream from the ksqlDB server.
