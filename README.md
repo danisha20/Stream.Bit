@@ -1,6 +1,8 @@
 # Stream.Bit 
 
-A full stack ML pipeline feeding an analytical dashboard which gives companies insight regarding the negative sentiment posted on tweets.
+This is a full stack ML pipeline feeding an analytical dashboard which gives companies insight regarding the negative sentiment posted on tweets.
+
+This project was built for the Hackaton HackOff v3.0 and obtained the Cofluent Challange Award.
 
 
 ## Solution
